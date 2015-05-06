@@ -1,0 +1,14 @@
+{{ template "header" }}
+          <div class="inner cover">
+            <h1 class="cover-heading">Entrez l'adresse d'un site et vérifiez si vous serez surveillé après le passage définitif de la loi.</h1>
+            <form method="get">
+                <div class="form-group">
+                    <p class="lead"><input type="text" class="form-control" placeholder="www.google.fr" size="10" name="q" /></p>
+                    {{if .}}<p class="lead" style="color: red">{{.}}</p>{{end}}
+                    <p class="lead">
+                        <button type="submit" class="btn btn-default">Vérifier!</button>
+                    </p>
+                </div>
+            </form>
+          </div>
+{{ template "footer" }}

@@ -1,0 +1,11 @@
+{{ template "header" }}
+          <div class="center-block">
+            <h3>Résultat pour {{.ReqHostname}}:</h3>
+            <h1>{{if .AnyFR}}<b>Oui !</b> Manu vous surveille.{{else}}Non ! Manu ne peut pas vous surveiller.{{end}}</h1>
+            <h3>Le serveur de {{.ReqHostname}} ayant l'adresse IP <i>{{.ServerIP}}</i>{{if .ServerFR}} étant hébergé en <b>France</b>, vous <b>serez</b> surveillé par la nouvelle loi sur le renseignement.{{else}} ne semble pas être hébergé en France{{if .ClientFR}} et ne devrait donc pas être surveillé, cependant comme votre connexion internet possède l'IP <i>{{.ClientIP}}</i> qui se trouve être en France, vos connexions vers ce site <u>seront surveillées</u> par la nouvelle loi sur le renseignement.{{else}}. Votre connexion n'étant pas non plus située France vous ne serez pas impacté par la nouvelle loi sur le renseignement.{{end}}{{end}}
+          </div>
+          <br/><br/>
+          {{if .AnyFR}}<div>
+            <p>Dans les faits, seules les connexions non-sécurisées pourront être analysées.</p>
+          </div>{{end}}
+{{ template "footer" }}
