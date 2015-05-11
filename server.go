@@ -63,11 +63,35 @@ func resultPage(r render.Render, req *http.Request, u *url.URL) {
 		return
 	}
 
-	if country, _ := geo.GetCountry(data.ClientIP); country == "FR" {
+	if country, _ := geo.GetCountry(data.ClientIP);    country == "FR" 
+							|| country == "PM" 
+							|| country == "MF"
+							|| country == "BL"
+							|| country == "GP"
+							|| country == "MQ"
+							|| country == "GF"
+							|| country == "RE"
+							|| country == "YT"
+							|| country == "NC"
+							|| country == "PF"
+							|| country == "WF"
+							|| country == "TF" {
 		data.ClientFR = true
 	}
 
-	if country, _ := geo.GetCountry(data.ServerIP); country == "FR" {
+	if country, _ := geo.GetCountry(data.ServerIP);    country == "FR" 
+							|| country == "PM" 
+							|| country == "MF"
+							|| country == "BL"
+							|| country == "GP"
+							|| country == "MQ"
+							|| country == "GF"
+							|| country == "RE"
+							|| country == "YT"
+							|| country == "NC"
+							|| country == "PF"
+							|| country == "WF"
+							|| country == "TF" {
 		data.ServerFR = true
 	}
 
